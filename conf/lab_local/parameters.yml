@@ -1,0 +1,22 @@
+train:
+  mlflow:
+    tracking_uri: "http://localhost:5000"
+    experiment_name: sentiment-analysis
+    run_name: sentiment-analysis_run
+    model_name: sk-learn-logistic-reg-pipeline
+    conda_env: ./src/environment_k8s.yml
+  test_size: 0.2
+  random_state: 3784
+  vectorizer:
+    min_df: 5
+    max_df: 0.80
+  linear_regression:
+    penalty: l2
+    max_iter: 100
+    C: 1
+predict:
+  mlflow: 
+  tracking_uri: "http://localhost:5000"
+  model_name: sk-learn-logistic-reg-pipeline
+  model-version: 1
+  model_uri: f"models://{model_name}/{model_version}"

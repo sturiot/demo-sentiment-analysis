@@ -1,0 +1,5 @@
+spark.app.name: sentiment-analysis
+spark.master: local[*]
+spark.deploy.mode: client
+spark.driver.memory: 4G
+spark.port.maxRetries: 10

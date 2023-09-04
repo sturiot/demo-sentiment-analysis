@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "[LOCAL]: Kedro Run Training",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "kedro",
+            "args": ["run", "--env=lab_local", "--pipeline=train"],
+            "justMyCode": false
+        },
+        {
+            "name": "[LOCAL]: Kedro Run Predict",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "kedro",
+            "args": ["run", "--env=lab_local", "--pipeline=predict"],
+            "justMyCode": false
+        }        
+    ]
+}

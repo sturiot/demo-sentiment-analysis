@@ -1,0 +1,15 @@
+artifact_uri: ./mlruns/1/1de6d1f7000042718ae588d83bf61d90/artifacts
+end_time: 1693859492340
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 1de6d1f7000042718ae588d83bf61d90
+run_uuid: 1de6d1f7000042718ae588d83bf61d90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1693859463861
+status: 4
+tags: []
+user_id: sturi
