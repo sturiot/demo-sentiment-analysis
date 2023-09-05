@@ -1,6 +1,7 @@
 train:
   mlflow:
-    tracking_uri: "http://localhost:5000"
+    #tracking_uri: "http://localhost:5000"
+    tracking_uri: "sqlite:///mlflowdb.sqlite"
     experiment_name: sentiment-analysis
     run_name: sentiment-analysis_run
     model_name: sk-learn-logistic-reg-pipeline
@@ -16,7 +17,8 @@ train:
     C: 1
 predict:
   mlflow: 
-  tracking_uri: "http://localhost:5000"
-  model_name: sk-learn-logistic-reg-pipeline
-  model-version: 1
-  model_uri: f"models://{model_name}/{model_version}"
+    #tracking_uri: "http://localhost:5000"
+    tracking_uri: "sqlite:///mlflowdb.sqlite"
+    model_name: sk-learn-logistic-reg-pipeline
+    model-version: 1
+    model_uri: f"models://{model_name}/{model_version}"
