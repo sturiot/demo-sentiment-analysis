@@ -16,9 +16,8 @@ train:
     max_iter: 100
     C: 1
 predict:
-  mlflow: 
-    tracking_uri: "http://localhost:5000"
-    #tracking_uri: "sqlite:///mlflowdb.sqlite"
-    model_name: sk-learn-logistic-reg-pipeline
-    model-version: 1
-    model_uri: f"models://{model_name}/{model_version}"
+  mlflow:
+    tracking_uri: ""
+    model_name:
+    model_version:
+    model_uri: f"mlflow-artifacts"

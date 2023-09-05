@@ -8,8 +8,8 @@ logger = logging.getLogger(__name__)
 
 def get_model(parameters):
 
-    model_name = parameter["mlflow"]["model_name"]
-    model_version = parameter["mlflow"]["model_version"]
+    model_name = parameters["mlflow"]["model_name"]
+    model_version = parameters["mlflow"]["model_version"]
 
     # load model
     model = mlflow.sklearn.load_model(model_uri=eval(parameters["mlflow"]["model_uri"]))
