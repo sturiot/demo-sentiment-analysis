@@ -1,5 +1,5 @@
 from kedro.pipeline import Pipeline, node
-from demo_sentiment_analysis.nodes.prediction import get_model, predict
+from demo_sentiment_analysis.nodes.prediction import get_model, predict_to_spark_dataframe
 from demo_sentiment_analysis.nodes.load_prep.load import load_data_as_pandas_df
 from demo_sentiment_analysis.nodes.load_prep.load_prep import preprocess_data, format_data_to_score
 
@@ -32,7 +32,7 @@ def create_prediction_pipeline(**kwargs):
                 name="predict_formatting_data_for_scoring",
             ),
             node(
-                func=predict,
+                func=predict_to_spark_dataframe,
                 inputs=["data_to_score_formatted", "model"],
                 outputs="data_scored",
                 name="predict_create_prediction_for_production_data",

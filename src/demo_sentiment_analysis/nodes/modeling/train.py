@@ -86,15 +86,15 @@ def training(X_feat_train, X_feat_test, y_train, y_test, model, params):
         plt.clf()
 
         # 7 - Complete model performance metrics and explainability with mlflow auto evaluate feature
-        # mlflow.evaluate(
-        #     model=log_reg_model_model_info.model_uri,
-        #     dataset_name='imdb',
-        #     data=X_feat_test.toarray(),
-        #     targets=y_test,
-        #     model_type="classifier",
-        #     evaluators=["default"],
-        #     feature_names=vectorizer.get_feature_names_out()
-        # )
+        mlflow.evaluate(
+            model=log_reg_model_model_info.model_uri,
+            dataset_name='imdb',
+            data=X_feat_test.toarray(),
+            targets=y_test,
+            model_type="classifier",
+            evaluators=["default"],
+            feature_names=vectorizer.get_feature_names_out()
+        )
 
         # 8 - Add model to the pipeline
         model.steps.append(['log_reg_model', log_reg_model])

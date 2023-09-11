@@ -21,6 +21,25 @@
             "module": "kedro",
             "args": ["run", "--env=lab_local", "--pipeline=predict"],
             "justMyCode": false
-        }        
+        },
+        {
+            "name": "[LOCAL]: Kedro Run Predict API",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "kedro",
+            "args": ["run", "--env=seldon_local", "--pipeline=predict_api"],
+            "justMyCode": false
+        },
+        {
+            "name": "[LOCAL]: Run API Pipeline Predict",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "src/demo_sentiment_analysis/run_api_pipeline.py",
+            "args": ["[\"This film is absolutely appalling and awful.\",\"This would probably be a good film to see.\",\"Not much to say, certainly the best movie of Christopher Nolan.\",\"How did they get investments to make this terrible fiction.\"]"],
+            "env": {"PYTHONPATH": "${workspaceFolder}/src${pathSeparator}${env:PYTHONPATH}"},
+            "justMyCode": false
+        },                            
     ]
 }

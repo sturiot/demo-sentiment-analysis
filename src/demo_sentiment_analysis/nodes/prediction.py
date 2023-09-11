@@ -15,12 +15,21 @@ def get_model(parameters):
     model = mlflow.sklearn.load_model(model_uri=eval(parameters["mlflow"]["model_uri"]))
     return model
 
+def load_model(model):
+    return model
+
 def do_pandas_to_spark_dataframe(data: pd.DataFrame):
     spark = SparkSession.builder.getOrCreate()
     return spark.createDataFrame(data).coalesce(1)
 
-def predict(data: list, model):
+def predict_to_spark_dataframe(data: list, model):
     predictions = model.predict(data)
     data_scored = pd.DataFrame({"review": data, "predictions": predictions})
 
     return do_pandas_to_spark_dataframe(data_scored)
+
+def predict_to_pandas_dataframe(data: list, model):
+    predictions = model.predict(data)
+    data_scored = pd.DataFrame({"review": data, "predictions": predictions})
+
+    return data_scored

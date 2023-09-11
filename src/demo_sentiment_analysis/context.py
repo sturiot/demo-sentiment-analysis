@@ -31,10 +31,6 @@ class ProjecContext(KedroContext):
             extra_params
         )
 
-        self.pyspark_submit_args_dic = {
-            'lab_local': self._pyspark_submit_args_lab_local
-        }
-
         self._init_env_vars()
 
         template_config_loader = TemplatedConfigLoader(
@@ -52,8 +48,15 @@ class ProjecContext(KedroContext):
         self._set_os_environ(env_params)
 
     def _create_spark_session(self):
+        
+        if self.env == 'seldon_local': return
+        
         logger.info("Initialize SparkSession")
-
+        
+        self.pyspark_submit_args_dic = {
+            'lab_local': self._pyspark_submit_args_lab_local
+        }
+        
         self.pyspark_submit_args_dic[self.env]()
 
         spark_params = self.config_loader.get("spark*")
