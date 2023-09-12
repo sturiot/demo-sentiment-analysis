@@ -1,8 +1,8 @@
 #!/bin/sh
 
-sudo kubectl create namespace seldon-kedro
+kubectl create namespace seldon-kedro
 
-sudo kubectl apply -f - << END
+kubectl apply -f - << END
 
 apiVersion: machinelearning.seldon.io/v1alpha2
 kind: SeldonDeployment
