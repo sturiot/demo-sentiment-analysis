@@ -64,7 +64,7 @@ class DemoSentimentAnalysis(object):
         logger.info("Predict called.")
         logger.info(X)
         
-        X = eval(X) if type(X) is str else X
+        X = eval(X) if type(X) is str else X.tolist()
 
         data_uri = 'data/01_raw/api/data.json'
 
