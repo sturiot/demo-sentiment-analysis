@@ -49,7 +49,7 @@ class ProjecContext(KedroContext):
 
     def _create_spark_session(self):
         
-        if self.env == 'seldon_local': return
+        if self.env == 'seldon': return
         
         logger.info("Initialize SparkSession")
         
