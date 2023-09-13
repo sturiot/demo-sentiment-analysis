@@ -5,8 +5,8 @@
 	  ],
 	  "tensor": {
 		"shape": [
-		  1,
-		  4
+		  4,
+		  1
 		],
 		"values": [
 			"This film is absolutely appalling and awful.",
