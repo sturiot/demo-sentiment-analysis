@@ -4,7 +4,7 @@
 	},
 	"inputs": [
 		{
-			"name": "predict",
+			"name": "review",
 			"data": [
 				"This film is absolutely appalling and awful.",
 				"This would probably be a good film to see.",

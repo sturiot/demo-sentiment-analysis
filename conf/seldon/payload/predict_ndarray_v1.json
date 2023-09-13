@@ -1,7 +1,9 @@
 {
 	"data": {
-		"names": [],
-		"ndarray": [
+		"names": [
+			"review"
+		  ],		
+		  "ndarray": [
 			"This film is absolutely appalling and awful.",
 			"This would probably be a good film to see.",
 			"Not much to say, certainly the best movie of Christopher Nolan.",
