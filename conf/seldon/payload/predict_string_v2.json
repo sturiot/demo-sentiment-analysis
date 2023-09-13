@@ -13,8 +13,8 @@
 			],
 			"datatype": "BYTES",
 			"shape": [
-				1,
-				4
+				4,
+				1
 			]
 		}
 	]
