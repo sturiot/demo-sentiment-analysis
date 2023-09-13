@@ -34,7 +34,7 @@ def create_prediction_api_pipeline(**kwargs):
             node(
                 func=predict_to_pandas_dataframe,
                 inputs=["data_formatted", "model"],
-                outputs="data_scored",
+                outputs=["data_scored", "data_outputs"],
                 name="predict_api_create_prediction_for_production_data",
             ),            
 

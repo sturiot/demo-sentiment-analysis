@@ -73,4 +73,4 @@ class DemoSentimentAnalysis(object):
                     
         with KedroSession.create(env=self.env) as session:
             outputs = session.run(pipeline_name=self.pipeline_name, from_nodes=['predict_api_load_data_as_pandas_dataframe'], to_nodes=['predict_api_create_prediction_for_production_data'])
-            return outputs
+            return outputs["data_outputs"]

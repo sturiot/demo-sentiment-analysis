@@ -32,4 +32,4 @@ def predict_to_pandas_dataframe(data: list, model):
     predictions = model.predict(data)
     data_scored = pd.DataFrame({"review": data, "predictions": predictions})
 
-    return data_scored
+    return data_scored, data_scored
