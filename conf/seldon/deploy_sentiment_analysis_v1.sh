@@ -16,7 +16,7 @@ spec:
     - spec:
         containers:
         - name: sentiment-analysis-pipeline-predict
-          image: sturiot/sturiotio:sentiment-analysis-v1.0.2
+          image: docker.io/sturiot/sturiotio:sentiment-analysis-v1.0.2
     graph:
       children: []
       endpoint:
